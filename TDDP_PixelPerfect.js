@@ -1,9 +1,14 @@
-/*
-	@target MZ
-	@plugindesc Enable pixelated image rendering mode for pixel perfect scaling
-	@author Galenmereth / TDD
-	@help No configuration necessary
-	@url https://github.com/TorD/mz-plugins
+//=============================================================================
+// RPG Maker MZ - Pixel Perfect scaling
+//=============================================================================
+
+
+/*:
+* @target MZ
+* @plugindesc Enable pixelated image rendering mode for pixel perfect scaling
+* @author Galenmereth / TDD
+* @help No configuration necessary
+* @url https://github.com/TorD/mz-plugins
 */
 
 /*
