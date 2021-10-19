@@ -3,7 +3,7 @@
 //=============================================================================
 
 /*:
-* @plugindesc 1.1.0 Enable pixel perfect scaling mode for your game
+* @plugindesc 1.1.1 Enable pixel perfect scaling mode for your game
 * @author Galenmereth / TDD
 * @help Optinally add an ingame menu option for your players to turn off or on the pixel perfect mode
 * @url https://github.com/TorD/mz-plugins
@@ -133,6 +133,15 @@ SOFTWARE.
 
 	function usePixelPerfectMode() {
 		return params.enableIngameOptions == "false" || ConfigManager.TDDP_pixelPerfectMode == true;
+	}
+
+	////////////////////////////////////////////////////////////////////////
+	// Bitmap extensions
+	///////////////////////////////////////////////////////////////////////
+	const _Bitmap_prototype_initialize = Bitmap.prototype.initialize;
+	Bitmap.prototype.initialize = function(width, height) {
+		_Bitmap_prototype_initialize.call(this, width, height);
+		this._smooth = !usePixelPerfectMode();
 	}
 
 	////////////////////////////////////////////////////////////////////////
